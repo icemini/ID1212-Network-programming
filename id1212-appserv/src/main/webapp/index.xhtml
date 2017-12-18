@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Currency Converter</title>
+    </h:head>
+    <h:body>
+        <h1>Currency converter</h1>
+        
+        Convert between: SEK, USD, EUR and GBP
+        
+        <h:form>
+            
+        <h3>From</h3>
+        
+        <h:inputText id="from" value="#{currencyManager.fromCurrency}"/>
+
+        <h3>To</h3>
+
+            <h:inputText id="to" value="#{currencyManager.toCurrency}"/>
+
+        <h3>Amount</h3>
+
+            <h:inputText id="amount" value="#{currencyManager.amount}"/>
+
+            <h:commandButton value="Convert" action="#{currencyManager.convert}"/>
+            
+        <h3>Converted amount</h3>
+            
+            <h:outputText id="convAmount" value="#{currencyManager.convertedAmount}"/>
+            
+            <br/>
+            <br/>
+        
+        </h:form>
+    </h:body>
+</html>
